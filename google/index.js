@@ -17,12 +17,19 @@ async function init() {
 
     // Create the info window content.
     const heading = document.createElement('h1');
-    heading.textContent = '서울시청';
+    heading.textContent = 'Uluru (Ayers Rock)';
 
     const content = document.createElement('div');
 
     const infoParagraph = document.createElement('p');
-    infoParagraph.textContent = `서울특별시 중구 태평로1가 31 | 서울특별시 중구 세종대로 110 서울특별시청`;
+    infoParagraph.textContent = `Uluru, also referred to as Ayers Rock, is a large sandstone rock formation 
+  in the southern part of the Northern Territory, central Australia. It lies
+  335 km (208 mi) south west of the nearest large town, Alice Springs; 450 km 
+  (280 mi) by road. Kata Tjuta and Uluru are the two major features of the 
+  Uluru - Kata Tjuta National Park. Uluru is sacred to the Pitjantjatjara and 
+  Yankunytjatjara, the Aboriginal people of the area. It has many springs, 
+  waterholes, rock caves and ancient paintings. Uluru is listed as a World 
+  Heritage Site.`;
 
     content.appendChild(infoParagraph);
 
@@ -36,7 +43,7 @@ async function init() {
     const infoWindow = new InfoWindow({
         headerContent: heading,
         content,
-        ariaLabel: '서울시청',
+        ariaLabel: 'Uluru',
         maxWidth: 500, // Set max width (optional).
     });
 
@@ -44,7 +51,7 @@ async function init() {
     const marker = new AdvancedMarkerElement({
         position: center,
         map: innerMap,
-        title: '서울시청',
+        title: 'Uluru (Ayers Rock)',
         gmpClickable: true,
     });
 
